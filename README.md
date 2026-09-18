@@ -2,25 +2,37 @@
 
 BSc (Honors) Computer Science @ University of Alberta · GPA 3.7 · Expected May 2027
 
-I build things end-to-end — data pipelines, backend APIs, ML models, and the tooling around them.
-My work spans data engineering (ETL, SQL, reporting automation), applied ML (predictive modelling,
-computer vision), and systems programming (networking, concurrent servers). I care about shipping
-things that are correct, documented, and maintainable — not just things that run.
+I build things end-to-end — cloud infrastructure, data pipelines, backend APIs, and the ML models
+and tooling around them. My work spans cloud/DevOps (serverless architectures, IaC), data engineering
+(ETL, SQL, reporting automation), applied ML (predictive modelling, computer vision, LLM integration),
+and systems programming (networking, concurrent servers). I care about shipping things that are
+correct, documented, and maintainable — not just things that run.
 
 ---
 
 ## What I've Built
 
+- **DataLens** — Serverless data lakehouse on AWS. Ingests live earthquake data from USGS every
+  6 hours (EventBridge + Lambda), cleans it and lands it as partitioned Parquet in S3, catalogs it
+  with Glue, and serves it two ways: a React/Recharts dashboard over fixed Athena queries, or a
+  plain-English question box where an LLM (Gemini) writes and safety-checks its own SQL before
+  running it. Fully defined in Terraform, CI via GitHub Actions, CloudWatch alarms + dashboard.
+  Live and running on a schedule, not a one-off script.
 - **SQL Server ETL Pipeline** — Python ETL + T-SQL stored procedures + Power BI dashboard + automated
   PowerPoint reporting. Full stack from raw CSV to executive summary, with audit logging throughout.
 - **F1 Race Pace Predictor** — Modular data pipeline over FastF1 telemetry. Regression + classification
   with GroupKFold CV (MAE ~0.32s, F1 ~0.76). Streamlit dashboard for interactive exploration.
-- **LabPortal REST API** — Flask + PostgreSQL + Docker + GitHub Actions CI. Normalized schema, CRUD
-  with structured error handling, pagination, integration tests, and a developer onboarding guide.
+- **QueueWise** — Full-stack waitlist & appointment management platform. FastAPI + React/Vite/Tailwind,
+  real-time queue dashboard over WebSockets, multi-tenant orgs, JWT auth, RBAC, auto-generated OpenAPI
+  docs.
 - **TestBench CI** — Automated regression suite (unit, integration, contract, SQL, Selenium e2e) for a
   Flask app. Containerized with Docker Compose, artifacts on failure, CI on every PR.
 - **Vision-Based Object Detection & 2D Pose Estimation** — Dual pipeline comparing HOG+SVM vs CNN.
   Encoder-decoder pose net predicting Gaussian heatmaps for 17 keypoints. Runs on CPU with synthetic data.
+- **RL Algorithms** — Q-Learning, SARSA, and DQN implemented from scratch in PyTorch, benchmarked
+  across 4 OpenAI Gymnasium environments (tabular vs. neural approximation, reward shaping).
+- **Innkeeper** — Federated social platform: independent Django REST Framework nodes share posts,
+  likes, and follows across servers via inbox/outbox federation. React frontend, deployed to Heroku.
 - **Sentio** — Android mood-tracking app in Java/Kotlin with Firebase/Firestore. Offline-first data
   layer with queued sync, conflict resolution, and role-aware access controls.
 - **Box Office Breakdown** — EDA on 4,800+ films (TMDB). Feature engineering, correlation analysis
@@ -30,9 +42,10 @@ things that are correct, documented, and maintainable — not just things that r
 
 ## Currently Working On
 
-- Deeper Power BI / DAX modelling
-- Computer Networks & Distributed Systems (CMPUT 313/481)
-- Machine Learning II (CMPUT 467)
+- Cloud infrastructure & IaC (AWS, Terraform) — DataLens was the first end-to-end build here
+- Sharpening algorithms & data structures fundamentals (NeetCode roadmap)
+- Computer Networks & Distributed Systems
+- Machine Learning
 
 ---
 
@@ -54,6 +67,8 @@ things that are correct, documented, and maintainable — not just things that r
 ![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
